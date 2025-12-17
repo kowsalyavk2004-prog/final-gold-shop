@@ -1,0 +1,458 @@
+/* Registration page bg */
+body.page-template-tpl-registration{
+    background: var(--wdtTertiaryColor);
+}
+
+/* Registration Form */
+.wdt-registration-form{
+padding: 60px;
+background-color: rgba(var(--wdtAccentTxtColorRgb),1);
+width: 100%;
+max-width: 700px;
+border-radius: var(--wdtRadius_Zero);
+margin: 0 auto;
+margin-bottom: 120px;
+/*! border: 1px solid var(--wdtBorderColor); */
+
+}
+.wdt-registration-form form{
+margin-top: 30px;
+}
+.wdt-registration-form .swarna-custom-auth-sc-border-title h2{
+text-align: center;
+margin-top: 0;
+}
+.wdt-registration-form p{
+text-align: center;
+font-weight: calc(var(--wdtFontWeight_Base) - 100);
+}
+.wdt-registration-form p strong{
+font-weight: calc(var(--wdtFontWeight_Base) - 100);
+}
+
+.wdt-registration-form form p:not(.submit) input{
+    padding: var(--wdtInputPadding);
+    border-radius: var(--wdtRadius_Zero);
+    background: var(--wdtAccentTxtColor);
+    color: var(--wdtHeadAltColor);
+}
+
+.wdt-registration-form form p{
+text-align: left;
+color: var(--wdtBodyTxtColor);
+}
+.wdt-registration-form form p:last-child{
+text-align: center;
+}
+.wdt-registration-form form p a.swarna-pro-login-link{
+color: var(--wdtLinkHoverColor);
+text-decoration: underline;
+text-decoration-color: transparent;
+}
+.wdt-registration-form form p a.swarna-pro-login-link:hover{
+text-decoration-color: currentColor;
+}
+.wdt-registration-form form#loginform{
+display: block;
+}
+
+.swarna-pro-login-description {text-align: center;/*! letter-spacing: var(--wdtLetterSpacing_2X); */}
+
+.wdt-registration-form input[type="submit"]{
+width: 100%;
+padding: var(--wdtPadding_Btn);
+    font-size: var(--wdtFontSize_Base);
+}
+.wdt-registration-form input[type="submit"]:hover{
+background-color: var(--wdtPrimaryColor);
+color: var(--wdtAccentTxtColor);
+}
+.swarna-pro-login-form-holder #loginform p {
+margin: 0 0 0 0;
+}
+
+.swarna-pro-login-form-holder #loginform {
+display: grid;
+grid-template-columns: repeat(1,1fr);
+justify-content: space-between;
+grid-gap: 15px;
+}
+
+.swarna-pro-login-form-holder #loginform > input{
+    border-radius: 0;
+    padding: var(--wdtInputPadding);
+    line-height: var(--wdtLineHeight_Alt);
+    color: var(--wdtHeadAltColor);
+    background-color: rgba(var(--wdtBorderColorRgb),0.075);
+}
+
+.swarna-pro-login-form-holder #loginform input[type="checkbox"]{
+    appearance: none;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--wdtHeadAltColor);
+    margin-right: 6px;
+    margin-top: -3px; 
+    border-radius: var(--wdtRadius_Zero);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.swarna-pro-login-form-holder #loginform input[type="checkbox"]:before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    top: -2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 2px solid var(--wdtHeadAltColor);
+    border-top: 0;
+    border-right: 0;
+    -webkit-transform: rotate(0deg) translateY(10px); 
+    transform: rotate(0deg) translateY(10px); 
+    -webkit-transition: var(--wdt-Ad-Transition);
+    transition: var(--wdt-Ad-Transition);
+    transition-duration: 0.2s;
+    opacity: 0;
+}
+
+.swarna-pro-login-form-holder #loginform input[type="checkbox"]:checked:before { 
+    opacity: 1;
+    -webkit-transform: rotate(-45deg) translateY(0px);
+    transform: rotate(-45deg) translateY(0px);
+  }
+
+.swarna-pro-login-form-holder #loginform > button{
+    font-size: var(--wdtFontSize_H6);
+}
+.swarna-pro-login-form-holder #loginform > button:hover{
+    background-color: var(--wdtPrimaryColor);
+}
+
+
+/* Login form */
+
+.swarna-pro-login-form-container{
+display: block;
+height: 100% !important;
+margin: 0;
+padding: 0;
+pointer-events: none;
+width: 100%;
+z-index: 10000;
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+}
+.swarna-pro-login-form-overlay{
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+z-index: 9999;
+background:var(--wdtTertiaryColor);
+}
+.login-form-custom-logo {text-align: center;
+    margin: 10px 0;
+    margin-bottom: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);  /*----min-20px and max-40px-----*/
+}
+.login-form-custom-logo img {max-width: 170px;}
+.swarna-pro-login-form-holder >*:not(:last-child),
+.swarna-pro-login-form-container .swarna-pro-login-form >*:not(:last-child) {margin-bottom: 20px;}
+.swarna-pro-login-form-container .swarna-pro-login-form {display: grid;padding: 0;pointer-events: auto;position: absolute;left: 0;right: 0;/* top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%); */background-color: var(--wdtTertiaryColor);width: 100%;margin: auto;height: 100%;place-content: center;
+}
+.swarna-pro-login-form-container .swarna-pro-login-form .swarna-pro-login-form-wrapper {padding: 80px;border-radius: var(--wdtRadius_Zero);/*! border: 1px solid; */max-width: 1000px;height: fit-content;overflow-y: auto;max-height: calc(100vh - 2*1.5em);background: var(--wdtAccentTxtColor); scrollbar-width: none;}
+.swarna-pro-login-form-container .swarna-pro-login-form .swarna-pro-login-form-wrapper::-webkit-scrollbar{ display: none;}
+
+.swarna-pro-login-form-container .swarna-pro-login-form .swarna-pro-title.swarna-pro-login-title{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);  /*----min-20px and max-40px-----*/
+}
+
+
+#loginform .login-username, #loginform .login-password{
+width: 100%;
+}
+
+#loginform .login-remember{
+text-align: left;
+}
+#loginform p.login-remember input[type="checkbox"]{
+opacity: 1;
+-webkit-appearance: none;
+appearance: none;
+width: 1em;
+height: 1em;
+border: 1px solid var(--wdtBorderColor);
+transform: translateY(-0.075em);
+display: inline-grid;
+place-content: center;
+background: rgba(var(--wdtTertiaryColorRgb),.0);
+border-radius: 2px;
+padding: 0 0;
+}
+#loginform p.login-remember input[type="checkbox"]:after{
+content: "";
+width: 0.65em;
+height: 0.65em;
+clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+transform: scale(0);
+transform-origin: bottom left;
+transition: 120ms transform ease-in-out;
+box-shadow: inset 1em 1em var(--wdtPrimaryColor);
+}
+#loginform p.login-remember input[type="checkbox"]:checked:after {
+transform: scale(1);
+}
+
+#loginform input[type="text"]:focus,
+#loginform input[type="password"]:focus,
+#loginform input[type="email"]:focus{
+border-color: var(--wdtPrimaryColor);
+}
+#loginform .login-submit input[type="submit"]{
+width: 100%;
+background-color: var(--wdtPrimaryColor);
+padding-top: 14px;
+padding-bottom: 14px;
+}
+#loginform .login-submit input[type="submit"]:hover{
+background-color: var(--wdtSecondaryColor);
+color: var(--wdtAccentTxtColor);
+}
+.swarna-pro-social-logins-divider{
+text-align: center;
+margin: 20px 0;
+display: flex;
+align-items: center;
+}
+.swarna-pro-social-logins-divider::after,
+.swarna-pro-social-logins-divider:before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(var(--wdtHeadAltColorRgb), 0.15);
+}
+
+.swarna-pro-social-logins-divider::after {
+    margin-left: 10px;
+}
+
+.swarna-pro-social-logins-divider:before {
+    margin-right: 10px;
+}
+
+
+.swarna-pro-title.swarna-pro-login-title h2{
+text-align: center;
+margin-top: 0;
+line-height: var(--wdtLineHeight_H2);
+}
+.swarna-pro-login-form-container .swarna-pro-login-form .swarna-pro-login-form-holder p.tpl-forget-pwd{
+margin-bottom: 0px;
+}
+.swarna-pro-login-form-container .swarna-pro-login-form .swarna-pro-login-form-holder p.tpl-forget-pwd a{
+color: var(--wdtLinkHoverColor);
+text-decoration: underline;
+text-decoration-color: transparent;
+transition: all 0.3s linear;
+}
+.swarna-pro-login-form-container .swarna-pro-login-form .swarna-pro-login-form-holder p.tpl-forget-pwd a:hover{
+text-decoration-color: var(--wdtLinkHoverColor);
+}
+
+a.swarna-pro-social-facebook-connect,
+a.swarna-pro-social-google-connect{
+width:100%;
+padding: var(--wdtInputPadding);
+display: inline-block;
+text-align: center;
+color: var(--wdt-elementor-color-black);
+border: 1px solid rgba(var(--wdtHeadAltColorRgb), 0.15);
+font-size: var(--wdtFontSize_Base);
+line-height: var(--wdtLineHeight_Alt);
+font-weight: var(--wdtFontWeight_Base);
+}
+
+a.swarna-pro-social-google-connect svg{
+    position: relative;
+    left: -5px;
+    top: -2px;
+    font-size: var(--wdtFontSize_H5);
+}
+
+a.swarna-pro-social-facebook-connect:hover,
+a.swarna-pro-social-google-connect:hover {
+background-color: var(--wdtSecondaryColor);
+color: rgba(var(--wdtAccentTxtColorRgb),1);
+border-color: rgba(var(--wdtSecondaryColorRgb),1);
+}
+a.swarna-pro-social-facebook-connect i,
+a.swarna-pro-social-google-connect i{
+margin-right: 8px;
+line-height: var(--wdtLineHeight_Ext);
+}
+.swarna-pro-login-form-container{
+max-width: 1640px;
+margin: auto;
+}
+
+a.swarna-pro-social-facebook-connect i{
+    background-color:rgb(24 91 176);
+    display: inline-grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+}
+a.swarna-pro-social-facebook-connect i:before{
+    content: '\f09a';
+    font-family: "Swarna Icons";
+    font-style: normal;
+    color: var(--wdtAccentTxtColor);
+    font-size: var(--wdtFontSize_Base);
+    line-height: var(--wdtLineHeight_Alt)
+}
+
+@media only screen and (max-width:1540px) {
+.swarna-pro-title.swarna-pro-login-title h2 {font-size: var(--wdtFontSize_H3);}
+.swarna-pro-login-form #loginform {margin-top: 0;}
+#loginform {
+display: grid;
+grid-template-columns: repeat(2,1fr);
+justify-content: space-between;
+grid-gap: 20px;
+}
+#loginform .login-submit {
+margin-bottom: 0;
+grid-area: 3/1;
+}
+}
+@media screen and (min-width:1281px) and (max-width: 1540px){
+.swarna-pro-login-form-container{
+max-width: 1080px;
+margin: auto;
+}
+
+.swarna-pro-login-form-holder >*:not(:last-child),
+.swarna-pro-login-form-container .swarna-pro-login-form >*:not(:last-child) {
+margin-bottom: 20px;
+}
+}
+@media screen and (min-width:1025px) and (max-width: 1280px){
+.swarna-pro-login-form-container{
+max-width: 900px;
+margin: auto;
+}    
+}
+@media screen and (min-width:768px) and (max-width: 1024px){
+.swarna-pro-login-form-container{
+max-width: 710px;
+margin: auto;
+}    
+}
+@media screen and (max-width: 767px){
+#loginform .login-username, 
+#loginform .login-password{
+margin-bottom: 20px;
+}
+.swarna-pro-login-form-container {overflow: scroll;}
+.swarna-pro-login-form-container .swarna-pro-login-form .swarna-pro-login-form-wrapper{
+padding: 50px;
+max-width: 520px;
+margin: 0 20px;
+width: calc(100% - 40px);
+}
+.swarna-pro-title.swarna-pro-login-title h2{
+font-size: var(--wdtFontSize_H4);
+}
+.wdt-registration-form{
+padding: 30px;
+}
+.wdt-registration-form .swarna-custom-auth-sc-border-title h2{
+font-size: var(--wdtFontSize_H3);
+}
+}
+@media screen and (min-width:480px) and (max-width: 767px){
+.swarna-pro-login-form-container{
+margin: auto;
+}    
+}
+@media screen and (max-width: 479px){
+
+.swarna-pro-login-form-container{
+max-width: 100%;
+margin: auto;
+}    
+.swarna-pro-title.swarna-pro-login-title h2{
+font-size: var(--wdtFontSize_H4);
+}
+.wdt-registration-form .swarna-custom-auth-sc-border-title h2{
+font-size: var(--wdtFontSize_H4);
+}
+}
+
+
+
+/* After Registration */
+.mu_register{
+width: 100%;
+margin: 0 auto;
+max-width: 600px;
+padding: 50px;
+background: var(--wdtSecondaryColor);
+box-shadow: rgba(0,0,0,.8) 0 0 40px;
+border-radius: var(--wdtRadius_3X);
+}
+.mu_register h2{
+font-size: var(--wdtFontSize_H4);
+text-align: center;
+}
+.mu_register form input{
+box-shadow: none;
+-webkit-box-shadow: none;
+border: 1px solid transparent;
+}
+.mu_register form input:focus{
+border-color: var(--wdtPrimaryColor);
+}
+.mu_register form .wp-signup-username-description,
+.mu_register form .wp-signup-email-description{
+margin-bottom: 15px;
+}
+.mu_register p.submit{
+
+margin-top: 20px;
+}
+.mu_register form p.submit input[type="submit"]{
+font-size: var(--wdtFontSize_Base);
+}
+@media screen and (max-width: 479px){
+.swarna-pro-login-form-container .swarna-pro-login-form .swarna-pro-login-form-wrapper {
+padding: 50px 20px;
+margin: 0 15px;
+width: calc(100% - 30px);
+}
+.mu_register{
+padding: 30px;
+}
+}
+
+
+@media only screen and (min-width:1281px) and (max-width:1540px) { .wdt-registration-form { margin-bottom: 100px; } }
+@media only screen and (min-width:1025px) and (max-width:1280px) { .wdt-registration-form { margin-bottom: 80px; } }
+@media only screen and (min-width:768px) and (max-width:1024px) { .wdt-registration-form { margin-bottom: 70px; } }
+@media only screen and (min-width:480px) and (max-width:767px) { .wdt-registration-form { margin-bottom: 60px; } }
+@media only screen and (max-width: 479px) { .wdt-registration-form { margin-bottom: 60px; } }

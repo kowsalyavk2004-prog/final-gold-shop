@@ -1,0 +1,43 @@
+(function ($) {
+
+      const wdtAnimationWidgetHandler = function($scope, $) {
+  
+        // Initialize each item with position and height
+  
+            $animation_wrapper = $scope.find('.wdt-animation-wrapper div[class*="-marqee"]');
+            $animation_wrapper_width = $animation_wrapper.width();
+            $animation_wrapper.css({ '--wdt-marque-width': $animation_wrapper_width+'px', '--wdt-marque-Margin-Width': '-'+$animation_wrapper_width+'px' });
+
+            $image_reveal_wrapper = $scope.find('.wdt-animation-wrapper .image-reveal');
+
+            $image_reveal_wrapper.each(function() {
+
+                  var $currentElement = $(this);
+                  
+                  // Find the child elements within the current element's scope
+                  var $animation_reveal_image_wrapper = $currentElement.find('.wdt-reveal-image');
+                  var $animation_reveal_text_wrapper = $currentElement.find('.wdt-reveal-text');
+            
+                  $currentElement.on('mousemove', function(e) {
+                        // var x = e.clientX;
+                        // var y = e.clientY;
+                        var x = e.offsetX;
+                        var y = e.offsetY;
+                        $animation_reveal_image_wrapper.css({
+                              'transform': 'translate3d(' + x + 'px, ' + y + 'px, 0)'
+                        });
+
+                        $animation_reveal_text_wrapper.css({
+                              '--x': x + 'px',
+                              '--y': y + 'px'
+                        });
+                  });
+            });
+            
+      };
+  
+      $(window).on('elementor/frontend/init', function () {
+            elementorFrontend.hooks.addAction('frontend/element_ready/wdt-animation.default', wdtAnimationWidgetHandler);
+      });
+  
+})(jQuery);

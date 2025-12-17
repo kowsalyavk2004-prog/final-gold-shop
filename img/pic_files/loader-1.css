@@ -1,0 +1,216 @@
+/*--------------------------------------------------------------
+    Loader
+--------------------------------------------------------------*/
+
+.pre-loader {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999991;
+    background-color: #fff;
+}
+
+.loader-inner {
+    padding: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.loader-text {
+    display: inline-block;
+    font-family: var(--wdtFontTypo_Alt);
+    font-size: 3.75rem;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    line-height: normal;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    -webkit-animation: textclip 1.5s linear infinite;
+    animation: textclip 1.5s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+/* Addition Style */
+.pre-loader.loader1 svg {
+font-size: clamp(5rem, 4.3033rem + 3.1847vw, 8.125rem);
+color: var(--wdtPrimaryColor);
+}
+
+.pre-loader.loader1 svg .wdt-sparkle-loader1,
+.pre-loader.loader1 svg .wdt-sparkle-loader7 {
+animation: sparking1 1s ease infinite;
+animation-delay: 0.25s;
+}
+
+.pre-loader.loader1 svg .wdt-sparkle-loader7{
+animation-delay: 0.5s;
+}
+
+@keyframes sparking1 {
+0% {
+    transform: translate(-25px, 25px);
+    opacity: 0;
+}
+
+80% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+100% {
+    opacity: 0;
+}
+
+}
+
+.pre-loader.loader1 svg .wdt-sparkle-loader2,
+.pre-loader.loader1 svg .wdt-sparkle-loader5 {
+animation: sparking2 1s ease infinite;
+animation-delay: 0.25s;
+}
+
+.pre-loader.loader1 svg .wdt-sparkle-loader5 {
+animation-delay: 0.5s;
+}
+
+@keyframes sparking2 {
+0% {
+    transform: translate(25px, -25px);
+    opacity: 0;
+}
+
+80% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+100% {
+    opacity: 0;
+}
+}
+
+
+.pre-loader.loader1 svg .wdt-sparkle-loader3,
+.pre-loader.loader1 svg .wdt-sparkle-loader4 {
+animation: sparking3 1s ease infinite;
+animation-delay: 0.25s;
+}
+.pre-loader.loader1 svg .wdt-sparkle-loader4 {
+animation-delay: 0.5s;
+}
+
+@keyframes sparking3 {
+0% {
+    transform: translate(25px, 25px);
+    opacity: 0;
+}
+
+80% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+100% {
+    opacity: 0;
+}
+
+}
+
+
+.pre-loader.loader1 svg .wdt-sparkle-loader6,
+.pre-loader.loader1 svg .wdt-sparkle-loader8 {
+animation: sparking4 1s ease infinite;
+animation-delay: 0.25s;
+}
+
+.pre-loader.loader1 svg .wdt-sparkle-loader6 {
+animation-delay: 0.5s;
+}
+
+
+
+@keyframes sparking4 {
+0% {
+    transform: translate(-25px, -25px);
+    opacity: 0;
+}
+
+80% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+100% {
+    opacity: 0;
+}
+
+}
+
+.pre-loader.loader1 svg .wdt-sparkle-loader9 {
+animation: sparking 1s ease infinite;
+animation-delay: 0.25s;
+transform-origin: center;
+}
+
+@keyframes sparking {
+0% {
+    transform: scale(1);
+    opacity: 1;
+}
+50% {
+    transform: scale(0.85);
+    opacity: 1;
+}
+
+100% {
+    transform: scale(1);
+    opacity: 1;
+}
+
+}
+
+
+
+/*--------------------------------------------------------------
+Accents
+--------------------------------------------------------------*/
+
+.pre-loader { background-color: var(--wdtBodyBGColor); }
+.loader-text { background-image: linear-gradient(to right, var(--wdtPrimaryColor) 10%, var(--wdtHeadAltColor) 50%, var(--wdtPrimaryColor) 60%); }
+
+
+/*--------------------------------------------------------------
+Responsive
+--------------------------------------------------------------*/
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+
+/* Common Styles for the devices below 479px width */
+
+@media only screen and (max-width: 479px) {
+
+}
